@@ -78,3 +78,16 @@ function mq_blog_category_shortcode() {
 
 add_shortcode('mq_blog_category', 'mq_blog_category_shortcode');
 
+// Blog category shortcode
+function mq_bel_process() {
+    ob_start();
+
+    require_once plugin_dir_path(__FILE__).'blocks/process-block.php';
+
+    return ob_get_clean();
+}
+
+add_shortcode('mq_bel_process', 'mq_bel_process');
+
+
+
